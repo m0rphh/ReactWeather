@@ -10,9 +10,9 @@ ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
       <Route path="about" component={About}/>
-      <Route path="example" component={Examples}/>
+      <Route path="examples" component={Examples}/>
       <IndexRoute component={Weather}/>
     </Route>
-  </Router>,
+  </Router>
   document.getElementById('app')
 );
