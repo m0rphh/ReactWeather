@@ -22,16 +22,13 @@ var Weather = React.createClass({
       that.setState({
         location: location,
         temp: temp,
-        isLoading: false,
-
+        isLoading: false
       });
     }, function (e) {
       that.setState({
         isLoading: false,
         errorMessage: e.message
-
       });
-
     });
   },
   render: function () {
@@ -44,19 +41,21 @@ var Weather = React.createClass({
         return <WeatherMessage temp={temp} location={location}/>;
       }
     }
-    function renderEror() {
-      if(typeof errorMessage === 'string') {
+
+    function renderError () {
+      if (typeof errorMessage === 'string') {
         return (
-          <ErrorModal/>
+          <ErrorModal message={errorMessage}/>
         )
       }
     }
+
     return (
       <div>
-        <h1 className="text-center">Weather</h1>
+        <h1 className="text-center page-title">Get Weather</h1>
         <WeatherForm onSearch={this.handleSearch}/>
         {renderMessage()}
-        {renderEror()}
+        {renderError()}
       </div>
     )
   }
