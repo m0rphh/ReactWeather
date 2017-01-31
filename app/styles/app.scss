@@ -1,0 +1,19 @@
+$main-color: #2199e8;
+
+.page-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+.title-color {
+  color: $main-color;
+}
+.velika {
+
+  p:first-letter {
+    text-transform: uppercase;
+  }
+}
+input[type="search"] {
+  box-shadow: none;
+}
